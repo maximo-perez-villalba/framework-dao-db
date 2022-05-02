@@ -1,5 +1,5 @@
 # framework-dao-db
-Este proyecto implementa la extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO.
+Este proyecto implementa la extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO. Para ver el proyecto padre de este ir a [framework-dao](https://github.com/maximo-perez-villalba/framework-dao).
 
 
 ## Instalación
@@ -32,8 +32,13 @@ El diagrama de clases muestra el diseño de implementación de la extensión DAO
 
 
 #### Como se usa
-Como DAODB es una clase abstracta es requerido crear una clase descendiente para su implementación específica.
+Como DAODB es una clase abstracta es requerido crear una clase que la extienda para su implementación específica.
+
 Con este fin creamos una clase que se llame Something que extienda de PersistentDB y su respectiva SomethingDAODB que extiende de DAODB.
+
+![image:uml-class-something-daodb.png](/docs/uml-class-something-daodb.png)
+
+El diagrama de clases muestra el diseño de implementación de la clase SomethingDAODB, donde expone que implementa 
 ```
 <?php
 // Para obtener una instancia de la clase SomethingDAODB.
@@ -45,7 +50,7 @@ $daodb = $objectPersistentDB->dao();
 // Para guardar una nueva instancia de la clase Something en la base de datos.
 $daodb->create();
 
-// También para guardar una nueva instancia de la clase Something en la base de datos, podemos usar (alias de create).
+// También para guardar una nueva instancia de la clase Something en la base de datos, podemos usar el método insert (alias de create).
 $daodb->insert();
 
 // Para sincronizar los cambios de un objeto de modelo.
