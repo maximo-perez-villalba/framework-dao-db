@@ -2,24 +2,23 @@
     "packages": [
         {
             "name": "maximo-perez-villalba/framework-dao",
-            "version": "1.5.1",
-            "version_normalized": "1.5.1.0",
+            "version": "1.6.0",
+            "version_normalized": "1.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maximo-perez-villalba/framework-dao.git",
-                "reference": "2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02"
+                "reference": "46d05835ccb6429448a67007f0db63f253d1df80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maximo-perez-villalba/framework-dao/zipball/2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02",
-                "reference": "2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02",
+                "url": "https://api.github.com/repos/maximo-perez-villalba/framework-dao/zipball/46d05835ccb6429448a67007f0db63f253d1df80",
+                "reference": "46d05835ccb6429448a67007f0db63f253d1df80",
                 "shasum": ""
             },
             "require": {
-                "maximo-perez-villalba/framework-environment": ">=1",
                 "php": ">=7.4"
             },
-            "time": "2022-05-02T02:01:42+00:00",
+            "time": "2022-05-02T03:53:55+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -40,7 +39,7 @@
             "description": "El proyecto implementa un framework liviano de persistencia orientado a objectos escrito en PHP. El framework esta basado en el patrón de diseño DAO (Data Access Object) y aunque su principal fin es pedagógico, el framework es completamente funcional.",
             "support": {
                 "issues": "https://github.com/maximo-perez-villalba/framework-dao/issues",
-                "source": "https://github.com/maximo-perez-villalba/framework-dao/tree/v1.5.1"
+                "source": "https://github.com/maximo-perez-villalba/framework-dao/tree/v1.6.0"
             },
             "install-path": "../maximo-perez-villalba/framework-dao"
         },

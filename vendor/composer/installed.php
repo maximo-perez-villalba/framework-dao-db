@@ -1,7 +1,7 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0',
-        'version' => '1.0.0.0',
+        'pretty_version' => '1.1.0',
+        'version' => '1.1.0.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,17 +11,17 @@
     ),
     'versions' => array(
         'maximo-perez-villalba/framework-dao' => array(
-            'pretty_version' => '1.5.1',
-            'version' => '1.5.1.0',
+            'pretty_version' => '1.6.0',
+            'version' => '1.6.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../maximo-perez-villalba/framework-dao',
             'aliases' => array(),
-            'reference' => '2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02',
+            'reference' => '46d05835ccb6429448a67007f0db63f253d1df80',
             'dev_requirement' => false,
         ),
         'maximo-perez-villalba/framework-dao-db' => array(
-            'pretty_version' => '1.0.0',
-            'version' => '1.0.0.0',
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

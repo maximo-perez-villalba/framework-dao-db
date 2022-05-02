@@ -9,7 +9,7 @@
 			"email": "maximo.villalba@gmail.com"
 		}
 	],
-	"version": "1.5.1",
+	"version": "1.6.0",
 	"minimum-stability": "stable",
 	"autoload": {
 		"psr-4": {
@@ -18,8 +18,7 @@
 	},
 	"autoload-dev": {},
 	"require": {
-		"php": ">=7.4",
-		"maximo-perez-villalba/framework-environment": ">=1"
+		"php": ">=7.4"
 	},
 	"require-dev": {},
 	"prefer-stable": true
