@@ -1,5 +1,5 @@
 # framework-dao-db
-Este proyecto implementa la extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO.
+Este proyecto implementa una extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO. Para ver el proyecto padre ir a [framework-dao](https://github.com/maximo-perez-villalba/framework-dao). Y aunque su fin principal es de apoyo pedagógico, la extensión es completamente funcional.
 
 
 ## Instalación
@@ -22,6 +22,7 @@ composer update
 ```
 
 
+## Documentación
 ### Extensión DAO para bases de datos (DAODB)
 Esta extensión implementa a través de la [clase DAODB](/src/framework/dao/db/DAODB.php) el CRUD definido en la [clase DAO](https://github.com/maximo-perez-villalba/framework-dao/blob/main/src/framework/dao/DAO.php), para comunicarse con bases de datos a través de [PDO](https://www.php.net/manual/es/class.pdo) (PHP Data Object). A su vez la clase DAODB incorpora métodos específicos para la recuperación de datos desde la bases de datos.
 
@@ -31,9 +32,22 @@ Esta extensión implementa a través de la [clase DAODB](/src/framework/dao/db/D
 El diagrama de clases muestra el diseño de implementación de la extensión DAODB, donde **los objetos de modelo** deben extender de la [clase PersistentDB](/src/framework/dao/db/PersistentDB.php). Esto implica que en la base de datos, las tablas que representan **los objetos de modelo** deben contener la columna `PRIMARY KEY` bajo el nombre `uid` y ser de tipo entero.
 
 
-#### Como se usa
-Como DAODB es una clase abstracta es requerido crear una clase descendiente para su implementación específica.
+#### Implementación
+Como DAODB es una clase abstracta es requerido crear una clase que la extienda para su implementación específica.
+
 Con este fin creamos una clase que se llame Something que extienda de PersistentDB y su respectiva SomethingDAODB que extiende de DAODB.
+
+![image:uml-class-something-daodb.png](/docs/uml-class-something-daodb.png)
+
+El diagrama de clases muestra el diseño de implementación de la clase SomethingDAODB, donde expone los tres métodos requeridos para particularizar la persistencia en una base de datos de los objetos Something. 
+
+Estos 3 métodos son:
+* **update():bool** definido en la clase DAO.
+* **insert():bool** definido en la clase DAODB.
+* **dataToObject(array):Something** definido en la clase DAODB.
+
+ 
+#### Como se usa
 ```
 <?php
 // Para obtener una instancia de la clase SomethingDAODB.
@@ -45,7 +59,7 @@ $daodb = $objectPersistentDB->dao();
 // Para guardar una nueva instancia de la clase Something en la base de datos.
 $daodb->create();
 
-// También para guardar una nueva instancia de la clase Something en la base de datos, podemos usar (alias de create).
+// También para guardar una nueva instancia de la clase Something en la base de datos, podemos usar el método insert (alias de create).
 $daodb->insert();
 
 // Para sincronizar los cambios de un objeto de modelo.
@@ -65,32 +79,3 @@ $list = SomethingDAODB::read( 'codigo = :codigo', [':codigo'=>'anValue'] );
 $list = SomethingDAODB::list( 'email LIKE :pattern', [ ':pattern' => '%@prueba.com' ] );
 ```
 
-
-## Documentación
-
-
-#### DAODB::create
-
-##### UML diagram sequence
-![image:uml-sequence-daodb-create.png](/docs/uml-sequence-daodb-create.png)
-
-##### PHP script sequence
-```
-<?php
-$alumno = new Alumno( 0, 'Azalea', 'Rojas', 'azalea.rojas@prueba.com' );
-{
-  $dao = $this->dao();
-  $dao->create()
-  {
-    $this->insert()
-    {
-      $conn = $this->connection();    
-      $statement = $conn->prepare($sqlQuery);
-      $statement->execute( $parameters );
-      $statement->closeCursor();
-      $lastUid = $conn->lastInsertId();
-      $this->object()->uid($lastUid);
-    }
-  }
-}
-```
