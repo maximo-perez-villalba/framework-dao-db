@@ -32,20 +32,20 @@ El diagrama de clases muestra el diseño de implementación de la extensión DAO
 
 
 #### Como se usa
+Como DAODB es una clase abstracta es requerido crear una clases descendientes para su implementación específica.
+Con estos fines creamos una clase que se llame Something que extienda de PersistentDB y su respectivo SomethingDAODB que extiende de DAODB.
 ```
 <?php
-use framework\dao\db\DAODB;
+// Para obtener una instancia de la clase SomethingDAODB.
+$daodb = new SomethingDAODB( $somethingPersistentDB );
 
-// Para obtener una instancia de la clase DAODB.
-$daodb = new DAODB( $objectPersistentDB );
-
-// También puedo obtener una instancia de la clase DAODB desde el objeto persistible. 
+// También puedo obtener una instancia de la clase SomethingDAODB desde el objeto persistible. 
 $daodb = $objectPersistentDB->dao();
 
-// Para guardar un nuevo objeto de modelo en la base de datos.
+// Para guardar una nueva instancia de la clase Something en la base de datos.
 $daodb->create();
 
-// También para guardar un nuevo objeto de modelo en la base de datos podemos usar (alias de create).
+// También para guardar una nueva instancia de la clase Something en la base de datos, podemos usar (alias de create).
 $daodb->insert();
 
 // Para sincronizar los cambios de un objeto de modelo.
@@ -54,8 +54,15 @@ $daodb->update();
 // Para borrar un objeto de modelo.
 $daodb->delete();
 
-// Para recuperar un o más objetos de modelo almacenados.
-$list = DAODB::read( 'nombreColumna = :keyValue1', [':keyValue1'=>'anValue'] );
+// Para recuperar un objeto de modelo almacenado en formato objeto de la clase PersistentDB.
+$something = SomethingDAODB::getObject( 'email = :email', [ ':email' => 'cvb.zxzxzx@prueba.com' ] );
+$something = SomethingDAODB::getObjectByUid( 1234 );
+
+// Para recuperar datos almacenados en formato mapa de arreglos.
+$list = SomethingDAODB::read( 'codigo = :codigo', [':codigo'=>'anValue'] );
+
+// Para recuperar objetos almacenados en formato mapa de objetos.
+$list = SomethingDAODB::list( 'email LIKE :pattern', [ ':pattern' => '%@prueba.com' ] );
 ```
 
 
