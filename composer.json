@@ -1,0 +1,31 @@
+{
+	"name": "maximo-perez-villalba/framework-dao-db",
+	"description": "Extensión de framework-dao para base de datos a través de PDO.",
+	"type": "library",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Máximo Perez Villalba",
+			"email": "maximo.villalba@gmail.com"
+		}
+	],
+	"version": "1.0.0",
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"framework\\dao\\db\\": "src/framework/dao/db/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"demo\\": "demo/src/demo/"
+		}
+	},
+	"require": {
+		"php": ">=7.4",
+		"maximo-perez-villalba/framework-environment": ">=1",
+		"maximo-perez-villalba/framework-dao": ">=1.0.0"
+	},
+	"require-dev": {},
+	"prefer-stable": true
+}

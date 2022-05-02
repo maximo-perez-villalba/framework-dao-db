@@ -1,0 +1,93 @@
+{
+    "packages": [
+        {
+            "name": "maximo-perez-villalba/framework-dao",
+            "version": "1.5.1",
+            "version_normalized": "1.5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximo-perez-villalba/framework-dao.git",
+                "reference": "2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximo-perez-villalba/framework-dao/zipball/2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02",
+                "reference": "2e2bfef5b4126d01f9d9a2fc082430ef0a3b4f02",
+                "shasum": ""
+            },
+            "require": {
+                "maximo-perez-villalba/framework-environment": ">=1",
+                "php": ">=7.4"
+            },
+            "time": "2022-05-02T02:01:42+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "framework\\dao\\": "src/framework/dao/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Máximo Perez Villalba",
+                    "email": "maximo.villalba@gmail.com"
+                }
+            ],
+            "description": "El proyecto implementa un framework liviano de persistencia orientado a objectos escrito en PHP. El framework esta basado en el patrón de diseño DAO (Data Access Object) y aunque su principal fin es pedagógico, el framework es completamente funcional.",
+            "support": {
+                "issues": "https://github.com/maximo-perez-villalba/framework-dao/issues",
+                "source": "https://github.com/maximo-perez-villalba/framework-dao/tree/v1.5.1"
+            },
+            "install-path": "../maximo-perez-villalba/framework-dao"
+        },
+        {
+            "name": "maximo-perez-villalba/framework-environment",
+            "version": "1.1.1",
+            "version_normalized": "1.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximo-perez-villalba/framework-environment.git",
+                "reference": "dfb430f56cc8b7506368aa39d8b99ee67d19dc4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximo-perez-villalba/framework-environment/zipball/dfb430f56cc8b7506368aa39d8b99ee67d19dc4a",
+                "reference": "dfb430f56cc8b7506368aa39d8b99ee67d19dc4a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "time": "2022-04-29T21:47:58+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "framework\\": "src/framework/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Máximo Perez Villalba",
+                    "email": "maximo.perez@davinci.edu.ar"
+                }
+            ],
+            "description": "El componente implementa una arquitectura liviana de control del ambiente de ejecución PHP, con fines pedagógicos.",
+            "support": {
+                "issues": "https://github.com/maximo-perez-villalba/framework-environment/issues",
+                "source": "https://github.com/maximo-perez-villalba/framework-environment/tree/v1.1.1"
+            },
+            "install-path": "../maximo-perez-villalba/framework-environment"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

@@ -1,0 +1,26 @@
+{
+	"name": "maximo-perez-villalba/framework-dao",
+	"description": "El proyecto implementa un framework liviano de persistencia orientado a objectos escrito en PHP. El framework esta basado en el patrón de diseño DAO (Data Access Object) y aunque su principal fin es pedagógico, el framework es completamente funcional.",
+	"type": "library",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Máximo Perez Villalba",
+			"email": "maximo.villalba@gmail.com"
+		}
+	],
+	"version": "1.5.1",
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"framework\\dao\\": "src/framework/dao/"
+		}
+	},
+	"autoload-dev": {},
+	"require": {
+		"php": ">=7.4",
+		"maximo-perez-villalba/framework-environment": ">=1"
+	},
+	"require-dev": {},
+	"prefer-stable": true
+}

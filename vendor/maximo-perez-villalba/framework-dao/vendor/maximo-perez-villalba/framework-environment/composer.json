@@ -1,0 +1,25 @@
+{
+	"name": "maximo-perez-villalba/framework-environment",
+	"description": "El componente implementa una arquitectura liviana de control del ambiente de ejecución PHP, con fines pedagógicos.",
+	"type": "library",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Máximo Perez Villalba",
+			"email": "maximo.perez@davinci.edu.ar"
+		}
+	],
+	"version": "1.1.1",
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"framework\\": "src/framework/"
+		}
+	},
+	"autoload-dev": {},
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {},
+	"prefer-stable": true
+}
