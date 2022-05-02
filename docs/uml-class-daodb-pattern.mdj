@@ -691,7 +691,8 @@
 																}
 															]
 														}
-													]
+													],
+													"isAbstract": true
 												},
 												{
 													"_type": "UMLClass",
@@ -784,7 +785,8 @@
 																}
 															]
 														}
-													]
+													],
+													"isAbstract": true
 												}
 											]
 										}
@@ -5167,7 +5169,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGAfXi5/Kxm+XA="
 											},
-											"font": "Arial;16;1",
+											"font": "Arial;16;3",
 											"left": 381,
 											"top": 391,
 											"width": 381.0234375,
@@ -5733,7 +5735,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGAfXi5/ax78zo="
 											},
-											"font": "Arial;16;1",
+											"font": "Arial;16;3",
 											"left": 109,
 											"top": 423,
 											"width": 149.8515625,
