@@ -1,5 +1,5 @@
 # framework-dao-db
-Este proyecto implementa la extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO. Para ver el proyecto padre ir a [framework-dao](https://github.com/maximo-perez-villalba/framework-dao).
+Este proyecto implementa una extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO. Para ver el proyecto padre ir a [framework-dao](https://github.com/maximo-perez-villalba/framework-dao). Y aunque su fin principal es de apoyo pedagógico, la extensión es completamente funcional.
 
 
 ## Instalación
@@ -22,6 +22,7 @@ composer update
 ```
 
 
+## Documentación
 ### Extensión DAO para bases de datos (DAODB)
 Esta extensión implementa a través de la [clase DAODB](/src/framework/dao/db/DAODB.php) el CRUD definido en la [clase DAO](https://github.com/maximo-perez-villalba/framework-dao/blob/main/src/framework/dao/DAO.php), para comunicarse con bases de datos a través de [PDO](https://www.php.net/manual/es/class.pdo) (PHP Data Object). A su vez la clase DAODB incorpora métodos específicos para la recuperación de datos desde la bases de datos.
 
@@ -38,10 +39,13 @@ Con este fin creamos una clase que se llame Something que extienda de Persistent
 
 ![image:uml-class-something-daodb.png](/docs/uml-class-something-daodb.png)
 
-El diagrama de clases muestra el diseño de implementación de la clase SomethingDAODB, donde expone los tres métodos requeridos para particularizar la persistencia en una base de datos de los objetos Something. Estos 3 métodos son:
+El diagrama de clases muestra el diseño de implementación de la clase SomethingDAODB, donde expone los tres métodos requeridos para particularizar la persistencia en una base de datos de los objetos Something. 
+
+Estos 3 métodos son:
 * **update():bool** definido en la clase DAO.
 * **insert():bool** definido en la clase DAODB.
 * **dataToObject(array):Something** definido en la clase DAODB.
+
  
 #### Como se usa
 ```
@@ -75,32 +79,3 @@ $list = SomethingDAODB::read( 'codigo = :codigo', [':codigo'=>'anValue'] );
 $list = SomethingDAODB::list( 'email LIKE :pattern', [ ':pattern' => '%@prueba.com' ] );
 ```
 
-
-## Documentación
-
-
-#### DAODB::create
-
-##### UML diagram sequence
-![image:uml-sequence-daodb-create.png](/docs/uml-sequence-daodb-create.png)
-
-##### PHP script sequence
-```
-<?php
-$alumno = new Alumno( 0, 'Azalea', 'Rojas', 'azalea.rojas@prueba.com' );
-{
-  $dao = $this->dao();
-  $dao->create()
-  {
-    $this->insert()
-    {
-      $conn = $this->connection();    
-      $statement = $conn->prepare($sqlQuery);
-      $statement->execute( $parameters );
-      $statement->closeCursor();
-      $lastUid = $conn->lastInsertId();
-      $this->object()->uid($lastUid);
-    }
-  }
-}
-```
