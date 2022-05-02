@@ -32,8 +32,8 @@ El diagrama de clases muestra el diseño de implementación de la extensión DAO
 
 
 #### Como se usa
-Como DAODB es una clase abstracta es requerido crear una clases descendientes para su implementación específica.
-Con estos fines creamos una clase que se llame Something que extienda de PersistentDB y su respectivo SomethingDAODB que extiende de DAODB.
+Como DAODB es una clase abstracta es requerido crear una clase descendiente para su implementación específica.
+Con este fin creamos una clase que se llame Something que extienda de PersistentDB y su respectiva SomethingDAODB que extiende de DAODB.
 ```
 <?php
 // Para obtener una instancia de la clase SomethingDAODB.
