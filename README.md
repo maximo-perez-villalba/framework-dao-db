@@ -28,12 +28,14 @@ Esta extensión implementa a través de la clase [DAODB](/src/framework/dao/db/D
 
 ![image:uml-class-daodb.png](/docs/uml-class-daodb.png)
 
-El diagrama de clases muestra el diseño de implementación de la extensión DAODB, donde **los objetos de modelo** deben extender de la clase PersistentDB. Esto implica que las tablas que representan los objetos de modelos deben contener la columna `PRIMARY KEY` bajo el nombre `uid` y de tipo entero.
+El diagrama de clases muestra el diseño de implementación de la extensión DAODB, donde **los objetos de modelo** deben extender de la clase PersistentDB. Esto implica que en la base de datos las tablas que representan los objetos de modelos deben contener la columna `PRIMARY KEY` bajo el nombre `uid` y ser de tipo entero.
 
 
 #### Como se usa
 ```
 <?php
+use framework\dao\db\DAODB;
+
 // Para obtener una instancia de la clase DAODB.
 $daodb = new DAODB( $objectPersistentDB );
 
