@@ -23,12 +23,12 @@ composer update
 
 
 ### Extensión DAO para bases de datos (DAODB)
-Esta extensión implementa a través de la clase [DAODB](/src/framework/dao/db/DAODB.php) el CRUD definido en la [clase DAO](https://github.com/maximo-perez-villalba/framework-dao/blob/main/src/framework/dao/DAO.php), para comunicarse con bases de datos a través de [PDO](https://www.php.net/manual/es/class.pdo) (PHP Data Object). A su vez la clase DAODB incorpora métodos específicos para la recuperación de datos desde la bases de datos.
+Esta extensión implementa a través de la [clase DAODB](/src/framework/dao/db/DAODB.php) el CRUD definido en la [clase DAO](https://github.com/maximo-perez-villalba/framework-dao/blob/main/src/framework/dao/DAO.php), para comunicarse con bases de datos a través de [PDO](https://www.php.net/manual/es/class.pdo) (PHP Data Object). A su vez la clase DAODB incorpora métodos específicos para la recuperación de datos desde la bases de datos.
 
 
 ![image:uml-class-daodb.png](/docs/uml-class-daodb.png)
 
-El diagrama de clases muestra el diseño de implementación de la extensión DAODB, donde **los objetos de modelo** deben extender de la clase PersistentDB. Esto implica que en la base de datos las tablas que representan los objetos de modelos deben contener la columna `PRIMARY KEY` bajo el nombre `uid` y ser de tipo entero.
+El diagrama de clases muestra el diseño de implementación de la extensión DAODB, donde **los objetos de modelo** deben extender de la [clase PersistentDB](/src/framework/dao/db/PersistentDB.php). Esto implica que en la base de datos, las tablas que representan **los objetos de modelo** deben contener la columna `PRIMARY KEY` bajo el nombre `uid` y ser de tipo entero.
 
 
 #### Como se usa
