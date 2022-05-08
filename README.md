@@ -1,5 +1,5 @@
 # framework-dao-db
-Este proyecto implementa una extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO. Para ver el proyecto padre ir a [framework-dao](https://github.com/maximo-perez-villalba/framework-dao). Y aunque su fin principal es de apoyo pedagógico, la extensión es completamente funcional.
+El proyecto implementa una extensión del framework `maximo-perez-villalba/framework-dao` para base de datos a través de PDO. Para ver el proyecto padre ir a [framework-dao](https://github.com/maximo-perez-villalba/framework-dao). Y aunque su fin principal es de apoyo pedagógico, la extensión es completamente funcional.
 
 
 ## Instalación
