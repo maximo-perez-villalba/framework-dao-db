@@ -17,7 +17,7 @@ abstract class PersistentDB extends Persistent
      *
      * @param int $uid
      */
-    public function __construct( int $uid )
+    public function __construct( int $uid = 0 )
     {
         $this->uid = $uid;
     }
